@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Teacher</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
+      overflow:hidden;
+    }
+
+    .card{
+      position:relative;
+      width:350px;
+      padding:30px;
+      border-radius:25px;
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(10px);
+      text-align:center;
+      color:white;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{ transform:translateY(0); }
+      50%{ transform:translateY(-10px); }
+    }
+
+    .profile{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid white;
+      box-shadow:0 0 20px rgba(255,255,255,0.5);
+      margin-bottom:20px;
+    }
+
+    h1{
+      font-size:32px;
+      margin-bottom:10px;
+      color:#ffd700;
+      text-shadow:0 0 10px rgba(255,215,0,0.8);
+    }
+
+    h2{
+      font-size:22px;
+      margin-bottom:15px;
+    }
+
+    p{
+      font-size:16px;
+      line-height:1.6;
+      color:#f1f5f9;
+    }
+
+    .btn{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      border-radius:30px;
+      background:#ff4081;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 0 15px rgba(255,64,129,0.5);
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+      background:#ff1f6b;
+    }
+
+    .balloon{
+      position:absolute;
+      width:60px;
+      animation:up 8s linear infinite;
+      opacity:0.8;
+    }
+
+    @keyframes up{
+      0%{
+        transform:translateY(100vh);
+      }
+      100%{
+        transform:translateY(-120vh);
+      }
+    }
+
+    .message{
+      margin-top:15px;
+      font-size:18px;
+      color:#fff;
+      display:none;
+      animation:fade 1s ease;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(10px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Balloons -->
+  <img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" style="left:10%; animation-delay:0s;">
+  <img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" style="left:80%; width:50px; animation-delay:2s;">
+  <img class="balloon" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" style="left:50%; width:70px; animation-delay:4s;">
+
+  <div class="card">
+    
+    <!-- Replace image -->
+    <img src="../image/p1.jpg" alt="Teacher" class="profile">
+
+    <h1>🎉 Happy Birthday 🎂</h1>
+    <h2>Dear Teacher</h2>
+
+    <p>
+      សូមជូនពរអ្នកគ្រូ/លោកគ្រូ មានសុខភាពល្អ  
+      សំណាងល្អ និងជោគជ័យគ្រប់ភារកិច្ច ❤️
+    </p>
+
+    <button class="btn" onclick="showMessage()">
+      Click Surprise 🎁
+    </button>
+
+    <div class="message" id="msg">
+      🎊 Wishing You Happiness & Success Forever 🎊
+    </div>
+
+  </div>
+
+  <script>
+    function showMessage(){
+      document.getElementById("msg").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
